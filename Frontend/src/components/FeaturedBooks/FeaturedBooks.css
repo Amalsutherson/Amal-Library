@@ -1,0 +1,26 @@
+.featured-books{
+    padding:80px 8%;
+    background:#f8fafc;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#1e293b;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#64748b;
+}
+
+.book-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    justify-items:center;
+}
