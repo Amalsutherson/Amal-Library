@@ -1,0 +1,673 @@
+/* =========================================================
+   AMAL AI - SIDE PANEL
+   ========================================================= */
+
+.home-ai-launcher {
+  position: fixed;
+
+  right: 26px;
+  bottom: 28px;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 15px 9px 9px;
+
+  border: 1px solid rgba(213, 169, 105, 0.4);
+  border-radius: 50px;
+
+  background: #39281f;
+  color: #f5dfb7;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 35px rgba(44, 29, 21, 0.25);
+
+  font-family: inherit;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.home-ai-launcher:hover {
+  background: #4a3327;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px rgba(44, 29, 21, 0.3);
+}
+
+
+.home-ai-launcher-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d5a565;
+  color: #39281f;
+
+  font-size: 16px;
+}
+
+
+.home-ai-launcher-text {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.home-ai-launcher-text strong {
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+}
+
+.home-ai-launcher-text small {
+  margin-top: 2px;
+
+  color: #c4af96;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.home-ai-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1100;
+
+  background: rgba(25, 17, 13, 0.35);
+
+  backdrop-filter: blur(2px);
+}
+
+
+/* =========================================================
+   PANEL
+   ========================================================= */
+
+.home-ai-panel {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1200;
+
+  width: min(430px, 100vw);
+
+  display: flex;
+  flex-direction: column;
+
+  background: #fbf7f0;
+
+  border-left: 1px solid #dfd1c1;
+
+  box-shadow:
+    -15px 0 45px rgba(48, 32, 24, 0.15);
+
+  transform: translateX(105%);
+
+  transition:
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-ai-panel-open {
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.home-ai-header {
+  min-height: 76px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e3d7ca;
+
+  background: rgba(255, 252, 247, 0.96);
+}
+
+
+.home-ai-header-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+
+.home-ai-avatar {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #3b2b22;
+}
+
+.home-ai-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.home-ai-header h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  color: #38271f;
+
+  font-size: 19px;
+}
+
+
+.home-ai-header span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #948377;
+
+  font-size: 11px;
+}
+
+
+.home-ai-close {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #806e62;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.2s ease;
+}
+
+.home-ai-close:hover {
+  background: #eee4d9;
+  color: #39281f;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.home-ai-content {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 24px 20px;
+
+  scrollbar-width: thin;
+}
+
+
+.home-ai-welcome {
+  padding-top: 20px;
+
+  text-align: center;
+}
+
+
+.home-ai-welcome-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #eee0cd;
+  color: #a36d38;
+
+  font-size: 24px;
+}
+
+
+.home-ai-welcome h3 {
+  margin: 0;
+
+  color: #3c2b22;
+
+  font-family: Georgia, serif;
+
+  font-size: 23px;
+}
+
+
+.home-ai-welcome > p {
+  max-width: 320px;
+
+  margin: 9px auto 25px;
+
+  color: #8b7b70;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   BOOK SELECT
+   ========================================================= */
+
+.home-ai-book-selector {
+  text-align: left;
+
+  margin-bottom: 20px;
+}
+
+
+.home-ai-book-selector label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  color: #594238;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.home-ai-book-selector select {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d8cabc;
+  border-radius: 9px;
+
+  background: #fffdf9;
+  color: #45332a;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+.home-ai-book-selector select:focus {
+  border-color: #b68149;
+
+  box-shadow:
+    0 0 0 3px rgba(182, 129, 73, 0.1);
+}
+
+
+/* =========================================================
+   SUGGESTIONS
+   ========================================================= */
+
+.home-ai-suggestions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  text-align: left;
+}
+
+
+.home-ai-suggestions button {
+  padding: 11px 13px;
+
+  border: 1px solid #e1d5c8;
+  border-radius: 9px;
+
+  background: #fffdf9;
+  color: #69574b;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  transition: 0.2s ease;
+}
+
+
+.home-ai-suggestions button:hover {
+  border-color: #bd8c58;
+
+  background: #faf2e6;
+
+  color: #563a29;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.home-ai-messages {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+.home-ai-message {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+
+.home-ai-user-message {
+  justify-content: flex-end;
+}
+
+
+.home-ai-message-bubble {
+  max-width: 84%;
+
+  padding: 11px 14px;
+
+  border-radius: 13px;
+
+  color: #46352c;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+
+.home-ai-user-message .home-ai-message-bubble {
+  background: #39281f;
+
+  color: #f5e6d0;
+
+  border-bottom-right-radius: 4px;
+}
+
+
+.home-ai-bot-message .home-ai-message-bubble {
+  background: #eee5da;
+
+  border-bottom-left-radius: 4px;
+}
+
+
+.home-ai-message-bubble small {
+  display: block;
+
+  margin-top: 8px;
+  padding-top: 7px;
+
+  border-top: 1px solid rgba(100, 75, 55, 0.12);
+
+  color: #8a786b;
+
+  font-size: 10px;
+}
+
+
+.home-ai-small-avatar {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #39281f;
+  color: #dfb575;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   TYPING
+   ========================================================= */
+
+.home-ai-typing {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 14px 16px;
+
+  border-radius: 13px;
+
+  background: #eee5da;
+}
+
+
+.home-ai-typing span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #9a806c;
+
+  animation: aiTyping 1.2s infinite;
+}
+
+.home-ai-typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.home-ai-typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+
+@keyframes aiTyping {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.home-ai-input-area {
+  padding: 14px 16px 17px;
+
+  border-top: 1px solid #e2d6c9;
+
+  background: #fffdf9;
+}
+
+
+.home-ai-input-area form {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.home-ai-input-area textarea {
+  width: 100%;
+  min-height: 52px;
+
+  padding: 13px 48px 13px 13px;
+
+  box-sizing: border-box;
+
+  resize: none;
+
+  border: 1px solid #d9ccbf;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #faf7f1;
+  color: #403027;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+
+.home-ai-input-area textarea:focus {
+  border-color: #b9854c;
+
+  box-shadow:
+    0 0 0 3px rgba(185, 133, 76, 0.1);
+}
+
+
+.home-ai-input-area textarea::placeholder {
+  color: #a29488;
+}
+
+
+.home-ai-input-area form button {
+  position: absolute;
+
+  right: 7px;
+  bottom: 7px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #39281f;
+  color: #e4b876;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.home-ai-input-area form button:hover:not(:disabled) {
+  background: #533a2b;
+}
+
+
+.home-ai-input-area form button:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+
+.home-ai-input-area > p {
+  margin: 7px 2px 0;
+
+  color: #a29387;
+
+  font-size: 9px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .home-ai-launcher {
+    right: 17px;
+    bottom: 18px;
+
+    padding: 8px;
+  }
+
+  .home-ai-launcher-text {
+    display: none;
+  }
+
+  .home-ai-launcher-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .home-ai-panel {
+    width: 100%;
+  }
+
+}

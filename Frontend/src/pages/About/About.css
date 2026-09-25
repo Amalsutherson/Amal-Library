@@ -1,0 +1,944 @@
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fbf8f2;
+  color: #241c17;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+.about-small-label {
+  display: inline-block;
+
+  color: #a74f32;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   AMAL HERO
+========================================= */
+
+.amal-hero {
+  min-height: 650px;
+
+  padding: 90px max(7vw, 40px);
+
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    0.8fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3e8dc,
+      #fbf8f2
+    );
+
+  border-bottom: 1px solid #e5ddd2;
+}
+
+.amal-hero-content {
+  max-width: 720px;
+}
+
+.amal-hero h1 {
+  margin: 18px 0 25px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(58px, 7vw, 100px);
+
+  line-height: 0.92;
+
+  letter-spacing: -5px;
+}
+
+.amal-hero h1 span {
+  color: #b85c3a;
+}
+
+.amal-intro {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #71645b;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+.amal-role {
+  margin-top: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #8d4c35;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   AMAL PHOTO
+========================================= */
+
+.amal-photo-container {
+  position: relative;
+
+  width: 370px;
+
+  justify-self: center;
+}
+
+.amal-photo {
+  width: 320px;
+  height: 400px;
+
+  position: relative;
+
+  z-index: 2;
+
+  overflow: hidden;
+
+  border-radius:
+    160px 160px 20px 20px;
+
+  border: 10px solid #fff;
+
+  box-shadow:
+    0 25px 55px rgba(73, 50, 35, 0.16);
+}
+
+.amal-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.amal-photo-decoration {
+  width: 300px;
+  height: 300px;
+
+  position: absolute;
+
+  right: 0;
+  top: 70px;
+
+  border-radius: 50%;
+
+  background: #d9bda5;
+}
+
+.amal-photo-caption {
+  position: absolute;
+
+  z-index: 3;
+
+  right: -10px;
+  bottom: 10px;
+
+  padding: 15px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #241c17;
+
+  color: #fff;
+
+  border-radius: 10px;
+}
+
+.amal-photo-caption strong {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+}
+
+.amal-photo-caption span {
+  margin-top: 4px;
+
+  color: #cfc2b9;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   ABOUT AMAL
+========================================= */
+
+.about-amal-section {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 110px 40px;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 100px;
+}
+
+.about-amal-heading h2 {
+  margin: 16px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(35px, 4vw, 56px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.about-amal-content {
+  padding-top: 5px;
+}
+
+.about-amal-content p {
+  margin: 0 0 22px;
+
+  color: #6f6259;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   JOURNEY
+========================================= */
+
+.amal-journey {
+  padding: 100px 40px;
+
+  background: #f3eee7;
+
+  border-top: 1px solid #e5ddd2;
+  border-bottom: 1px solid #e5ddd2;
+}
+
+.journey-heading {
+  max-width: 750px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.journey-heading h2 {
+  margin: 15px 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 52px;
+
+  letter-spacing: -2px;
+}
+
+.journey-heading p {
+  margin: 0;
+
+  color: #75685e;
+
+  line-height: 1.8;
+}
+
+.journey-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.journey-card {
+  padding: 30px 25px;
+
+  background: #fff;
+
+  border: 1px solid #e2d7cb;
+
+  border-radius: 14px;
+}
+
+.journey-icon {
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f3e8dc;
+
+  color: #b85c3a;
+
+  border-radius: 10px;
+
+  font-size: 21px;
+}
+
+.journey-card > span {
+  color: #b85c3a;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.journey-card h3 {
+  margin: 10px 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 21px;
+}
+
+.journey-card p {
+  margin: 0;
+
+  color: #75685e;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   WHY AMAL
+========================================= */
+
+.why-amal {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 110px 40px;
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr;
+
+  gap: 50px;
+}
+
+.why-amal-number {
+  color: #b85c3a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+.why-amal-content {
+  max-width: 800px;
+}
+
+.why-amal-content h2 {
+  margin: 15px 0 25px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(35px, 5vw, 60px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.why-amal-content p {
+  max-width: 750px;
+
+  color: #71645b;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================
+   AMAL AI
+========================================= */
+
+.amal-ai-section {
+  max-width: 1200px;
+
+  margin: 0 auto 110px;
+
+  padding: 65px;
+
+  display: grid;
+
+  grid-template-columns: 360px 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  background: #241c17;
+
+  color: #fff;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+}
+
+
+/* AI VISUAL */
+
+.amal-ai-visual {
+  height: 330px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  border-radius: 50%;
+}
+
+.ai-orbit-one {
+  width: 280px;
+  height: 280px;
+
+  transform: rotate(25deg);
+}
+
+.ai-orbit-two {
+  width: 210px;
+  height: 210px;
+
+  transform: rotate(-35deg);
+}
+
+.amal-ai-avatar {
+  width: 145px;
+  height: 145px;
+
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  background: #b85c3a;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 60px rgba(184, 92, 58, 0.35);
+}
+
+.amal-ai-avatar svg {
+  font-size: 43px;
+}
+
+.amal-ai-avatar span {
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+/* AI CONTENT */
+
+.amal-ai-content {
+  position: relative;
+  z-index: 2;
+}
+
+.amal-ai-content .about-small-label {
+  color: #d9a48c;
+}
+
+.amal-ai-content h2 {
+  margin: 14px 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 55px;
+
+  letter-spacing: -2px;
+  color: #cf6615;
+}
+
+.amal-ai-content p {
+  max-width: 650px;
+
+  color: #d4c9c1;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.ai-features {
+  margin-top: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+.ai-features div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #eee4dd;
+
+  font-size: 13px;
+}
+
+.ai-features svg {
+  color: #d99a7d;
+}
+
+
+/* =========================================
+   PLATFORM
+========================================= */
+
+.about-platform {
+  padding: 100px 40px;
+
+  background: #f3eee7;
+
+  border-top: 1px solid #e5ddd2;
+}
+
+.platform-heading {
+  max-width: 750px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.platform-heading h2 {
+  margin: 15px 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 50px;
+
+  letter-spacing: -2px;
+}
+
+.platform-heading p {
+  color: #75685e;
+}
+
+.platform-grid {
+  max-width: 1000px;
+
+  margin: 60px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.platform-item {
+  padding: 30px 20px;
+
+  text-align: center;
+
+  background: #fff;
+
+  border: 1px solid #e2d7cb;
+
+  border-radius: 13px;
+}
+
+.platform-item > svg {
+  color: #b85c3a;
+
+  font-size: 25px;
+
+  margin-bottom: 18px;
+}
+
+.platform-item h3 {
+  margin: 0 0 10px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+}
+
+.platform-item p {
+  margin: 0;
+
+  color: #75685e;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.amal-message {
+  padding: 120px 30px;
+
+  text-align: center;
+
+  background: #fbf8f2;
+}
+
+.amal-message-mark {
+  color: #b85c3a;
+
+  font-family: Georgia, serif;
+
+  font-size: 80px;
+
+  line-height: 0.5;
+}
+
+.amal-message h2 {
+  margin: 35px 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(40px, 6vw, 75px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+.amal-message p {
+  color: #75685e;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.amal-links {
+  padding: 55px 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 20px;
+
+  border-top: 1px solid #e5ddd2;
+}
+
+.amal-social-links {
+  display: flex;
+
+  gap: 12px;
+}
+
+.amal-social-links a {
+  padding: 10px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #594b42;
+
+  background: #f3eee7;
+
+  border: 1px solid #e0d5c9;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.amal-social-links a:hover {
+  background: #b85c3a;
+
+  border-color: #b85c3a;
+
+  color: #fff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .amal-hero {
+    grid-template-columns: 1fr;
+
+    padding: 80px 40px;
+
+    text-align: center;
+  }
+
+  .amal-hero-content {
+    margin: auto;
+  }
+
+  .amal-intro {
+    margin: auto;
+  }
+
+  .amal-role {
+    justify-content: center;
+  }
+
+  .amal-photo-container {
+    margin: 20px auto 0;
+  }
+
+  .journey-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .platform-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .amal-ai-section {
+    margin-left: 25px;
+    margin-right: 25px;
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .amal-ai-visual {
+    margin: auto;
+  }
+
+  .ai-features {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .amal-hero {
+    padding: 65px 25px;
+  }
+
+  .amal-hero h1 {
+    font-size: 58px;
+  }
+
+  .amal-intro {
+    font-size: 15px;
+  }
+
+  .amal-photo-container {
+    width: 300px;
+  }
+
+  .amal-photo {
+    width: 270px;
+    height: 350px;
+  }
+
+  .amal-photo-decoration {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-amal-section {
+    padding: 75px 25px;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .amal-journey {
+    padding: 75px 25px;
+  }
+
+  .journey-heading h2 {
+    font-size: 40px;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-amal {
+    padding: 75px 25px;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .amal-ai-section {
+    margin: 50px 15px;
+
+    padding: 40px 20px;
+  }
+
+  .amal-ai-content h2 {
+    font-size: 42px;
+    color: #cf6615;
+  }
+
+  .amal-ai-visual {
+    transform: scale(0.85);
+  }
+
+  .about-platform {
+    padding: 75px 25px;
+  }
+
+  .platform-heading h2 {
+    font-size: 40px;
+  }
+
+  .platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amal-message {
+    padding: 90px 25px;
+  }
+
+  .amal-message h2 {
+    font-size: 48px;
+  }
+
+  .amal-social-links {
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .amal-social-links a {
+    justify-content: center;
+  }
+}

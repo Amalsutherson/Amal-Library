@@ -1,0 +1,299 @@
+/* =========================================
+   LATEST BOOKS
+========================================= */
+
+.latest-books {
+  width: 100%;
+  padding: 110px 6% 120px;
+  background: #f4efe7;
+  border-top: 1px solid #e5ddd2;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  color: #b85c3a;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.section-header h2 {
+  margin: 0 0 16px;
+
+  color: #241c17;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 500;
+
+  letter-spacing: -1px;
+}
+
+.section-header p {
+  margin: 0;
+
+  color: #7c7065;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   BOOK GRID
+========================================= */
+
+.latest-books-grid {
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.latest-books-status {
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #7c7065;
+
+  font-size: 14px;
+}
+
+.latest-books-error {
+  color: #a34832;
+}
+
+.latest-books-error button {
+  padding: 10px 18px;
+
+  border: 1px solid #d7c8bb;
+  border-radius: 3px;
+
+  background: #fffaf4;
+
+  color: #4c3a2e;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.latest-books-error button:hover {
+  background: #241c17;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.loading-spinner {
+  width: 28px;
+  height: 28px;
+
+  border: 2px solid #ded2c5;
+  border-top-color: #b85c3a;
+
+  border-radius: 50%;
+
+  animation: latestBooksSpin 0.8s linear infinite;
+}
+
+@keyframes latestBooksSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   VIEW ALL
+========================================= */
+
+.view-all {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 55px;
+}
+
+.view-all-button {
+  min-height: 46px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 0 24px;
+
+  border: 1px solid #cfc2b5;
+  border-radius: 3px;
+
+  background: transparent;
+
+  color: #3f3027;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.view-all-arrow {
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.view-all-button:hover {
+  background: #241c17;
+  border-color: #241c17;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.view-all-button:hover .view-all-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .latest-books {
+    padding: 90px 5% 100px;
+  }
+
+  .latest-books-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+  }
+
+  .section-header h2 {
+    font-size: 38px;
+  }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .latest-books {
+    padding: 75px 5% 85px;
+  }
+
+  .latest-books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-size: 34px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+  .latest-books {
+    padding: 60px 20px 70px;
+  }
+
+  .latest-books-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 330px;
+  }
+
+  .section-header {
+    margin-bottom: 35px;
+  }
+
+  .section-header h2 {
+    font-size: 30px;
+
+    letter-spacing: -0.5px;
+  }
+
+  .section-header p {
+    font-size: 13px;
+  }
+
+  .view-all {
+    margin-top: 40px;
+  }
+}

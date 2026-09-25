@@ -1,0 +1,39 @@
+<svg width="600" height="800" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="800" fill="#f3e8dc"></rect>
+
+  <rect x="55" y="55" width="490" height="690" rx="18" fill="#fbf8f2" stroke="#d8c8b8" stroke-width="4"></rect>
+
+  <circle cx="300" cy="300" r="90" fill="#b85c3a" opacity="0.12"></circle>
+
+  <path d="M250 245
+       C250 225 265 210 285 210
+       H350
+       C370 210 385 225 385 245
+       V385
+       C385 405 370 420 350 420
+       H285
+       C265 420 250 405 250 385Z" fill="#b85c3a"></path>
+
+  <path d="M250 245
+       C250 225 235 210 215 210
+       H185
+       C165 210 150 225 150 245
+       V385
+       C150 405 165 420 185 420
+       H215
+       C235 420 250 405 250 385Z" fill="#99482e"></path>
+
+  <text x="300" y="510" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#241c17">
+    Amal
+  </text>
+
+  <text x="300" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#786b61">
+    Open Library
+  </text>
+
+  <line x1="170" y1="595" x2="430" y2="595" stroke="#d8c8b8" stroke-width="3"></line>
+
+  <text x="300" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#9a806c">
+    BOOK COVER
+  </text>
+</svg>

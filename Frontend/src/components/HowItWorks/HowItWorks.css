@@ -1,0 +1,387 @@
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-it-works {
+  width: 100%;
+
+  padding: 110px 6% 120px;
+
+  background: #fbf8f2;
+
+  border-top: 1px solid #e5ddd2;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.how-header {
+  max-width: 720px;
+
+  margin: 0 auto 65px;
+
+  text-align: center;
+}
+
+.how-tag {
+  display: inline-block;
+
+  margin-bottom: 17px;
+
+  color: #b85c3a;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+}
+
+.how-header h2 {
+  margin: 0 0 17px;
+
+  color: #241c17;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 42px;
+  line-height: 1.1;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+}
+
+.how-header p {
+  max-width: 590px;
+
+  margin: 0 auto;
+
+  color: #7c7065;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   STEPS CONTAINER
+========================================= */
+
+.steps-container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   STEP WRAPPER
+========================================= */
+
+.step-wrapper {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   STEP CARD
+========================================= */
+
+.step-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 280px;
+
+  padding: 38px 30px 35px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3d9cc;
+
+  border-radius: 4px;
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #d5c4b4;
+
+  box-shadow:
+    0 18px 40px rgba(45, 30, 20, 0.08);
+}
+
+
+/* =========================================
+   STEP NUMBER
+========================================= */
+
+.step-number {
+  position: absolute;
+
+  top: 18px;
+  right: 22px;
+
+  color: #d8cdc1;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   STEP ICON
+========================================= */
+
+.step-icon {
+  width: 68px;
+  height: 68px;
+
+  margin: 15px auto 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f3e8dc;
+
+  color: #b85c3a;
+
+  font-size: 24px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.step-card:hover .step-icon {
+  background: #241c17;
+
+  color: #e5c083;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   STEP TITLE
+========================================= */
+
+.step-card h3 {
+  margin: 0 0 13px;
+
+  color: #241c17;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   STEP DESCRIPTION
+========================================= */
+
+.step-card p {
+  margin: 0;
+
+  color: #7c7065;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.step-arrow {
+  flex-shrink: 0;
+
+  color: #b8aa9c;
+
+  font-size: 17px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.step-wrapper:hover .step-arrow {
+  color: #b85c3a;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .how-it-works {
+    padding: 90px 5% 100px;
+  }
+
+  .steps-container {
+    gap: 18px;
+  }
+
+  .step-wrapper {
+    gap: 18px;
+  }
+
+  .step-card {
+    padding: 35px 22px;
+  }
+
+  .step-card h3 {
+    font-size: 20px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .how-it-works {
+    padding: 80px 5% 90px;
+  }
+
+  .how-header {
+    margin-bottom: 45px;
+  }
+
+  .how-header h2 {
+    font-size: 36px;
+  }
+
+  .steps-container {
+    flex-direction: column;
+
+    max-width: 600px;
+
+    gap: 20px;
+  }
+
+  .step-wrapper {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .step-card {
+    min-height: 250px;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+  }
+
+  .step-wrapper:hover .step-arrow {
+    transform: rotate(90deg) translateX(3px);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .how-it-works {
+    padding: 65px 20px 75px;
+  }
+
+  .how-header {
+    margin-bottom: 38px;
+  }
+
+  .how-tag {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .how-header h2 {
+    font-size: 31px;
+
+    letter-spacing: -0.5px;
+  }
+
+  .how-header p {
+    font-size: 13px;
+  }
+
+  .step-card {
+    min-height: 240px;
+
+    padding: 32px 22px;
+  }
+
+  .step-icon {
+    width: 62px;
+    height: 62px;
+
+    margin-bottom: 21px;
+
+    font-size: 22px;
+  }
+
+  .step-card h3 {
+    font-size: 20px;
+  }
+
+  .step-card p {
+    font-size: 13px;
+  }
+
+}

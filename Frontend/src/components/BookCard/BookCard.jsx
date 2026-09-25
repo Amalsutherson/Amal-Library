@@ -1,40 +1,96 @@
 import "./BookCard.css";
 import { FaStar, FaBookOpen } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function BookCard() {
+import defaultBookCover from "../../assets/default-book-cover.svg";
+
+function BookCard({ book }) {
+
+  if (!book) {
+    return null;
+  }
+
+  const coverImage = book.cover_image || defaultBookCover;
+
+  const rating =
+    book.rating !== null &&
+    book.rating !== undefined &&
+    book.rating !== ""
+      ? Number(book.rating).toFixed(1)
+      : "0.0";
+
   return (
-    <div className="book-card">
+    <article className="book-card">
 
-      <div className="book-image">
-        <img
-          src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500"
-          alt="Book Cover"
-        />
-      </div>
+      {/* Book Cover */}
+      <Link
+        to={`/books/${book.id}`}
+        className="book-image-link"
+      >
+        <div className="book-image">
 
+          <img
+            src={coverImage}
+            alt={book.title || "Book Cover"}
+            onError={(event) => {
+              event.currentTarget.src = defaultBookCover;
+            }}
+          />
+
+        </div>
+      </Link>
+
+
+      {/* Book Information */}
       <div className="book-content">
 
-        <span className="category">Programming</span>
+        {/* Category */}
+        <span className="book-category">
+          {book.category || "General"}
+        </span>
 
-        <h3>Learning Python</h3>
 
-        <p className="author">
-          by Mark Lutz
+        {/* Title */}
+        <h3 className="book-title">
+          {book.title || "Untitled Book"}
+        </h3>
+
+
+        {/* Author */}
+        <p className="book-author">
+          by {book.author || "Unknown Author"}
         </p>
 
-        <div className="rating">
+
+        {/* Rating */}
+        <div className="book-rating">
+
           <FaStar />
-          <span>4.8</span>
+
+          <span>
+            {rating}
+          </span>
+
         </div>
 
-        <button>
+
+        {/* Read Book */}
+        <Link
+          to={`/reader/${book.id}`}
+          className="book-read-button"
+        >
+
           <FaBookOpen />
-          Read Book
-        </button>
+
+          <span>
+            Read Book
+          </span>
+
+        </Link>
 
       </div>
 
-    </div>
+    </article>
   );
 }
 
